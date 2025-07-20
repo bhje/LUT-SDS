@@ -5,8 +5,8 @@
 }
 
 :root{
-    --primary-color: #5b8c5b;
-    --light-color: #f4f4f6;
+    --primary-color: #707c8a;
+    --light-color: #eeeef0;
     --dark-color: #111;
 }
 
@@ -15,7 +15,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #333;
+    background-color: var(--primary-color);
 }
 
 a{
@@ -36,7 +36,8 @@ img{
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: #6a6a6a;
+    z-index: 1;
+    background-color: var(--primary-color);
 }
 
 .navbar .container {
@@ -55,6 +56,7 @@ img{
     display: block;
     font-weight: 600;
     transition: 0.5s;
+    color: var(--light-color);
 }
 
 .navbar ul li a:hover {
@@ -66,7 +68,7 @@ img{
 }
 
 /* Home */
-.home {
+.home .background{
     background-image: url('../images/hero-bg-desktop.jpg');
     background-size: cover;
     background-position: center;
@@ -74,6 +76,7 @@ img{
     min-height: 100vh;
 
     background-attachment: fixed;
+    opacity: 80%;
 }
 
 .home .container {
@@ -82,7 +85,7 @@ img{
 
 .home .home-text {
     position: absolute;
-    top: 40%;
+    top: 350px;
     width: 100%;
     text-align: center;
     color: #fff;
@@ -92,12 +95,34 @@ img{
 /* Gallery */
 .gallery {
     background-color: var(--light-color);
+    padding-top: 60px;
+}
+
+.gallery .gallery-text {
+    padding-top: 40px;
+    size: 4rem;
+}
+
+.gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery .gallery-grid a {
+    width: 100%; 
+    height: auto;
+    display: block;
 }
 
 /* Footer */
 .footer {
-    background-color: var(--dark-color);
     padding: 40px 0;
+}
+
+.footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(1fr);
 }
 
 /* Utility classes */
@@ -106,4 +131,9 @@ img{
 .container {
     padding: 0 130px;
     align-items: center;
+}
+
+/* Buttons */
+.btn-primary {
+    color: var(--light-color);
 }
