@@ -167,13 +167,13 @@ img{
 
 .footer .footer-flex {
     display: flex;
-    gap: 100px;
     justify-content: space-between;
     align-items: start;
+    margin-right: 10px;
 }
 
 .footer .footer-flex .card {
-    margin-top: -10px;
+    margin: -10px 20px 20px 0;
 }
 
 .footer input[type='email'] {
@@ -271,6 +271,7 @@ img{
     color: #000;
     border-radius: 10px;
     padding: 20px;
+    width: 30%;
 }
 
 /* Hamburger Button */
@@ -348,12 +349,14 @@ img{
     }
 
     .footer .footer-flex {
+        margin: 0;
         flex-direction: column;
         gap: 20px;
     }
 
     .footer .card {
         margin: 0;
+        width: auto;
     }
 
     .text-xxl {
