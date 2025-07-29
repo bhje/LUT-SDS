@@ -9,7 +9,8 @@ How to run this project:
 1.1 Most folders inside of the folder "gallery-images" are optional.
    Please download at least one or two of them to complete the layout of the page.
 2. Host the file index.html in a browser, for example using the built in host function in VSCode
-3. Done! You can now view the page and its features. 
+3. Done! You can now view the page and its features.
+   (Alternatively, use the pages site: https://bhje.github.io/LUT-SDS/)
 
 **Planning:**
 
