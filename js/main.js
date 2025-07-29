@@ -1,37 +1,60 @@
-// FAQ Accordion
+// Jallery accordion
 document.addEventListener('DOMContentLoaded', () => {
-    const faqContainer = document.querySelector('.faq-content');
+    const jalleryContainer = document.querySelector('.jallery-content');
 
-    faqContainer.addEventListener('click', (e) => {
-        const groupHeader = e.target.closest('.faq-group-header');
-        
+    jalleryContainer.addEventListener('click', (e) => {
+        const groupHeader = e.target.closest('.jallery-grid-text');
+
         if(!groupHeader) return;
-        
+
         const group = groupHeader.parentElement;
-        const groupBody = group.querySelector('.faq-group-body');
+        const groupBody = group.querySelector('.jallery-grid');
         const icon = group.querySelector('i');
 
-        // Toggle icon
-        icon.classList.toggle('fa-plus');
-        icon.classList.toggle('fa-minus');
+        const isOpen = groupBody.classList.contains('open');
 
-        // Toggle visibility of body
-        groupBody.classList.toggle('open');
-
-        //Close other open FAQ bodies
-        const otherGroups = faqContainer.querySelectorAll('.faq-group');
-
+        // Close all groups first
+        const otherGroups = jalleryContainer.querySelectorAll('.jallery-group');
         otherGroups.forEach((otherGroup) => {
-            if (otherGroup !== group) {
-                const otherGroupBody = otherGroup.querySelector('.faq-group-body');
-                const otherIcon = otherGroup.querySelector('.faq-group-header i');
+            const otherGroupBody = otherGroup.querySelector('.jallery-grid');
+            const otherIcon = otherGroup.querySelector('.jallery-grid-text i');
 
-                otherGroupBody.classList.remove('open');
-                otherIcon.classList.remove('fa-minus');
-                otherIcon.classList.add('fa-plus');
-            }
+            otherGroupBody.classList.remove('open');
+            otherIcon.classList.remove('fa-minus');
+            otherIcon.classList.add('fa-plus');
         });
+
+        // Toggle the clicked group based on previous state
+        if (!isOpen) {
+            groupBody.classList.add('open');
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+        } else {
+            groupBody.classList.remove('open');
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+        }
     });
+});
+
+// Jallery content
+const years = [2021, 2022, 2023, 2024, 2025];
+years.forEach(year => {
+  const gridContainer = document.querySelector(`.jallery-grid-${year}`);
+  if (!gridContainer) return;
+  let i = 1;
+  function loadImage() {
+    const img = document.createElement('img');
+    img.src = `gallery-images/${year}/separate-${i}.jpg`;
+    img.onload = () => {
+        gridContainer.appendChild(img);
+        i++;
+        loadImage();
+    };
+    img.onerror = () => {
+    }
+  }
+  loadImage();
 });
 
 // Mobile Menu
