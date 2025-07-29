@@ -1,5 +1,7 @@
 **LUT SDS Front End Developer Course**
 
+**Name: Benjamin Hjelt**
+
 **My Project: Photo Gallery**
 
 How to run this project:
