@@ -20,7 +20,7 @@ body {
 
 a{
     text-decoration: none;
-    color: #bebebe;
+    color: var(--dark-color);
 }
 
 ul {
@@ -44,7 +44,7 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 130px;
+    padding: 10px 0px;
 }
 
 .navbar .main-menu ul {
@@ -60,7 +60,7 @@ img{
 }
 
 .navbar ul li a:hover {
-    color: var(--primary-color);
+    color: var(--dark-color);
 }
 
 .navbar ul li a i {
@@ -85,17 +85,16 @@ img{
 
 .home .home-text {
     position: absolute;
-    top: 350px;
+    top: 320px;
     width: 100%;
     text-align: center;
     color: #fff;
-    font-size: 2rem;
 }
 
 /* Gallery */
 .gallery {
     background-color: var(--light-color);
-    padding-top: 60px;
+    padding: 60px 0;
 }
 
 .gallery .gallery-text {
@@ -200,7 +199,7 @@ img{
 
 /* Text classes */
 .text-xxl {
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 1.2;
     font-weight: 600;
     margin: 40px 0 20px;
@@ -272,4 +271,92 @@ img{
     color: #000;
     border-radius: 10px;
     padding: 20px;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 3;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #eee;
+    margin: 6px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+    background: var(--dark-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Media Queries */
+@media (max-width: 670px) {
+    .navbar .container {
+        padding: 10px;
+    }
+    .navbar .logo {
+        left: 0;
+    }
+    
+    .navbar .main-menu {
+        display: none;
+    }
+
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    .home .background {
+        background-image: url(../images/hero-bg-mobile.jpg);
+    }
+
+    .home .home-text {
+        top: 300px;
+        padding: 5px;
+    }
+
+    .footer .footer-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer .card {
+        margin: 0;
+    }
+
+    .text-xxl {
+        font-size: 2.4rem;
+    }
 }
