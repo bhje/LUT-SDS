@@ -5,12 +5,18 @@
 **My Project: Photo Gallery**
 
 How to run this project:
-1. Download the files:
-1.1 Most folders inside of the folder "gallery-images" are optional.
-   Please download at least one or two of them to complete the layout of the page.
-2. Host the file index.html in a browser, for example using the built in host function in VSCode
-3. Done! You can now view the page and its features.
-   (Alternatively, use the pages site: https://bhje.github.io/LUT-SDS/)
+1. Clone the repository to a local folder.
+
+2. Optional: Inside the gallery-images folder, most subfolders can be removed if they are too large.
+However, please keep at least one or two to ensure the layout renders correctly.
+
+3. Open the index.html file in a browser.
+For example, you can use the built-in Live Server extension in VS Code to preview the site.
+
+4. Done! You should now be able to view and interact with the page and its features.
+
+(Alternatively, use the pages site: https://bhje.github.io/LUT-SDS/)
+
 
 **Planning:**
 
