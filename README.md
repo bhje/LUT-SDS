@@ -1,5 +1,6 @@
-LUT SDS Front End Developer Course
-My Project: Photo Gallery
+**LUT SDS Front End Developer Course**
+
+**My Project: Photo Gallery**
 
 How to run this project:
 1. Download the files:
@@ -8,7 +9,7 @@ How to run this project:
 2. Host the file index.html in a browser, for example using the built in host function in VSCode
 3. Done! You can now view the page and its features. 
 
-Planning:
+**Planning:**
 
 Parts:
 - Menu bar
